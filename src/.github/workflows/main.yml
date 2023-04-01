@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x
+
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+
+    - name: Build Docker image
+      run: docker build -t my-api .
+
+    - name: Start Docker container
+      run: docker run -d -p 5000:5000 --name my-api-container my-api
+
+    - name: Run tests
+      env:
+        API_URL: http://localhost:5000
+      run: pytest
+
+    - name: Stop Docker container
+      run: docker stop my-api-container
