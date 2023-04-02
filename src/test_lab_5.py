@@ -4,6 +4,12 @@ from my_module.py import subtract, multiply, divide, calculate_mean
 
 
 class TestMyModule(unittest.TestCase):
+
+    def test_add(self):
+        self.assertEqual(add(5, 2), 7)
+        self.assertEqual(add(0, 0), 0)
+        self.assertEqual(add(-5, 2), -3)    
+
     def test_subtract(self):
         self.assertEqual(subtract(5, 2), 3)
         self.assertEqual(subtract(0, 0), 0)
