@@ -13,9 +13,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Run script to update code
-        run: ./run_script.sh
-
       - name: Install dependencies
         run: |
           pip install --upgrade pip
