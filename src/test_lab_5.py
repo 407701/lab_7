@@ -6,7 +6,7 @@ from my_module.py import subtract, multiply, divide, calculate_mean
 class TestMyModule(unittest.TestCase):
 
     def test_add(self):
-        self.assertEqual(add(5, 2), 7)
+        self.assertEqual(add(5, 2), 200)
         self.assertEqual(add(0, 0), 0)
         self.assertEqual(add(-5, 2), -3)    
 
