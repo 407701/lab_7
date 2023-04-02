@@ -1,6 +1,6 @@
 import unittest
 import numpy as np
-from my_module import subtract, multiply, divide, calculate_mean
+from my_module.py import subtract, multiply, divide, calculate_mean
 
 
 class TestMyModule(unittest.TestCase):
