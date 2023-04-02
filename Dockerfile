@@ -1,6 +1,7 @@
 # Zbuduj obraz bazowy na podstawie najnowszej wersji Pythona
 FROM python:3.10-slim-buster
 
+
 # Praca w katalogu /lab_6
 WORKDIR /lab_6
 
