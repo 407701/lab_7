@@ -13,7 +13,7 @@ jobs:
       - name: Install pytest
         run: |
           pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install -r src/requirements.txt
       - name: Run unit tests
         run: pytest src/test_app.py
       - name: Login to Docker Hub
