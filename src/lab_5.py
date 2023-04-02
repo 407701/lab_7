@@ -2,7 +2,7 @@ import logging
 import numpy as np
 
 def add(a, b):
-    return a + x
+    return a
 
 def subtract(a, b):
     return a - b
